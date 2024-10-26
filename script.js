@@ -37,9 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-
   // Automatically play music on load
-window.addEventListener("load", () => {
+  window.addEventListener("load", () => {
     const music = document.getElementById("diwaliMusic");
     const controlButton = document.getElementById("musicControl");
   
@@ -49,8 +48,9 @@ window.addEventListener("load", () => {
     // Update the button text based on the state
     controlButton.textContent = music.paused ? "Play Music" : "Pause Music";
   });
-// Toggle music playback
-function toggleMusic() {
+  
+  // Toggle music playback
+  function toggleMusic() {
     const music = document.getElementById("diwaliMusic");
     const controlButton = document.getElementById("musicControl");
   

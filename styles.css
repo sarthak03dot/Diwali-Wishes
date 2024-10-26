@@ -103,7 +103,8 @@
     color: #ffdd59;
     margin-top: 20px;
   }
-
+  
+  /* Author styles */
   .author {
     position: fixed;
     bottom: 20px;
@@ -124,10 +125,8 @@
     }
   }
   
-  
-  
   /* Container for trail elements */
-.trail-container {
+  .trail-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -160,6 +159,8 @@
       opacity: 0;
     }
   }
+  
+  /* Music Control Button */
   #musicControl {
     position: fixed;
     bottom: 20px;
@@ -176,5 +177,67 @@
   
   #musicControl:hover {
     background-color: #e64a19;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .greeting {
+      font-size: 2.5rem; /* Adjust size for smaller screens */
+    }
+  
+    .message {
+      font-size: 1rem; /* Smaller message font size */
+    }
+  
+    .author {
+      font-size: 0.8rem; /* Smaller author font size */
+      bottom: 10px; /* Move closer to the bottom */
+    }
+  
+    #musicControl {
+      padding: 8px 16px; /* Smaller button padding */
+      font-size: 0.9rem; /* Smaller button font size */
+    }
+  
+    /* Diya size adjustments */
+    .diya {
+      width: 40px; /* Smaller diya size */
+      height: 60px; /* Smaller diya height */
+    }
+  
+    .flame {
+      width: 12px; /* Smaller flame width */
+      height: 24px; /* Smaller flame height */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .greeting {
+      font-size: 2rem; /* Further adjust for very small screens */
+    }
+  
+    .message {
+      font-size: 0.9rem; /* Smaller message font size */
+    }
+  
+    .author {
+      font-size: 0.7rem; /* Even smaller author font size */
+    }
+  
+    #musicControl {
+      padding: 6px 12px; /* Smaller button padding */
+      font-size: 0.8rem; /* Smaller button font size */
+    }
+  
+    /* Diya size adjustments */
+    .diya {
+      width: 30px; /* Smaller diya size */
+      height: 45px; /* Smaller diya height */
+    }
+  
+    .flame {
+      width: 10px; /* Smaller flame width */
+      height: 20px; /* Smaller flame height */
+    }
   }
   
