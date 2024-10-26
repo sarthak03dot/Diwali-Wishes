@@ -1,0 +1,158 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  /* Greeting styles */
+  .greeting {
+    font-size: 3rem;
+    color: #ffdd59;
+    margin-bottom: 20px;
+  }
+  
+  /* Fireworks animation */
+  .fireworks {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .firework {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, yellow, red, purple);
+    border-radius: 50%;
+    position: absolute;
+    animation: explode 2s infinite ease-in-out;
+  }
+  
+  @keyframes explode {
+    0% {
+      transform: scale(0.2);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  
+  /* Diya styles */
+  .diya-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .diya {
+    width: 50px;
+    height: 80px;
+    background-color: #b5651d;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+  }
+  
+  .flame {
+    width: 15px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flicker 1s infinite alternate;
+  }
+  
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 0.8;
+      transform: translateY(-2px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(2px);
+    }
+  }
+  
+  /* Message styles */
+  .message {
+    font-size: 1.2rem;
+    color: #ffdd59;
+    margin-top: 20px;
+  }
+  
+  /* Container for trail elements */
+.trail-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+  }
+  
+  /* Individual trail element */
+  .trail {
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 1), rgba(255, 0, 0, 0.7));
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    animation: trailAnimation 0.8s ease-out forwards;
+  }
+  
+  /* Animation for trail elements */
+  @keyframes trailAnimation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  #musicControl {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  #musicControl:hover {
+    background-color: #e64a19;
+  }
+  
