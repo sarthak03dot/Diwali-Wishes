@@ -103,6 +103,28 @@
     color: #ffdd59;
     margin-top: 20px;
   }
+
+  .author {
+    position: fixed;
+    bottom: 20px;
+    font-size: 1rem;
+    color: #ff5722;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;
+  }
+  
+  /* Keyframes for moving text */
+  @keyframes moveText {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  
   
   /* Container for trail elements */
 .trail-container {
